@@ -123,6 +123,9 @@ export default function App() {
 
       <LogPanel logs={logs} />
       <ResultsPanel result={result} />
+      <footer style={{ color: '#666', fontSize: '12px', marginTop: '32px' }}>
+        Powered by Claude via OpenRouter · spf13/cobra
+      </footer>
     </div>
   );
 }
