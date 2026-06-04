@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ResultsPanel from './ResultsPanel.jsx';
 
-const BACKEND = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 function extractDiff(raw) {
   if (!raw) return '';
@@ -55,7 +55,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      const resp = await fetch(`${BACKEND}/run/stream`, {
+      const resp = await fetch(`${API_BASE}/run/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ issue_url: issueUrl, repo_url: repoUrl }),
