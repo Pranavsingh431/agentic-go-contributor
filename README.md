@@ -1,8 +1,8 @@
-# Agentic Go Contributor
 
 ![CI](https://github.com/Pranavsingh431/agentic-go-contributor/actions/workflows/backend-ci.yml/badge.svg)
 
-# Agentic Go Contributor
+<h1 align="center">Agentic Go Contributor</h1>
+
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
@@ -15,7 +15,9 @@ plans a fix, generates a patch, runs go test, and produces a PR summary.
 
 ## Demo
 
-![Dashboard Demo](assets/dashboard-demo.png)
+<p align="center">
+  <img src="assets/dashboard-demo.png" width="900">
+</p>
 
 
 Backend: https://agentic-go-contributor.onrender.com
