@@ -1,7 +1,5 @@
 fastapi
 uvicorn[standard]
-langgraph
-langchain
 httpx
 python-dotenv
 pytest

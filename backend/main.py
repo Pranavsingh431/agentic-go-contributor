@@ -1,7 +1,6 @@
 import sys
 import os
 
-# Ensure backend/ is on sys.path for uvicorn --reload subprocesses (macOS spawn)
 sys.path.insert(0, os.path.dirname(__file__))
 
 from fastapi import FastAPI
