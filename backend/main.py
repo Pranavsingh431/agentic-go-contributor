@@ -12,7 +12,9 @@ app = FastAPI(title="Agentic Go Contributor")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173",
-                   "https://agentic-go-contributor-8vls7z9ma.vercel.app"],
+                   "https://agentic-go-contributor-8vls7z9ma.vercel.app",
+                  "https://agentic-go-contributor-967nujr76.vercel.app",
+                  "https://agentic-go-contributor.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
