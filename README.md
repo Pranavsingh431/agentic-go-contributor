@@ -13,6 +13,15 @@
 An AI agent that reads a GitHub issue from a Go open-source repo,
 plans a fix, generates a patch, runs go test, and produces a PR summary.
 
+## Demo
+
+![Dashboard Demo](assets/dashboard-demo.png)
+
+
+Backend: https://agentic-go-contributor.onrender.com
+
+Frontend: https://agentic-go-contributor.vercel.app
+
 ## Architecture
 
 ```
