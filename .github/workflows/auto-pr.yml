@@ -1,0 +1,20 @@
+name: Auto PR
+
+on:
+  push:
+    branches:
+      - "phase/*"
+      - "feat/*"
+
+jobs:
+  auto-open-pr:
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Open PR if none exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr view || gh pr create --fill --base main || true
