@@ -2,6 +2,14 @@
 
 ![CI](https://github.com/Pranavsingh431/agentic-go-contributor/actions/workflows/backend-ci.yml/badge.svg)
 
+# Agentic Go Contributor
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black)
+![Render](https://img.shields.io/badge/Backend-Render-purple)
+
 An AI agent that reads a GitHub issue from a Go open-source repo,
 plans a fix, generates a patch, runs go test, and produces a PR summary.
 
