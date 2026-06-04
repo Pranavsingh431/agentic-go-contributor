@@ -3,6 +3,21 @@ import ResultsPanel from './ResultsPanel.jsx';
 
 const BACKEND = 'http://localhost:8000';
 
+function extractDiff(raw) {
+  if (!raw) return '';
+  return raw
+    .split('\n')
+    .filter(line =>
+      line.startsWith('---') ||
+      line.startsWith('+++') ||
+      line.startsWith('@@') ||
+      line.startsWith('+') ||
+      line.startsWith('-') ||
+      line.startsWith(' ')
+    )
+    .join('\n');
+}
+
 function LogPanel({ logs }) {
   const bottomRef = useRef(null);
   useEffect(() => {
@@ -66,7 +81,9 @@ export default function App() {
           const json = JSON.parse(line.slice(5).trim());
           setLogs(prev => [...prev, json]);
           if (json.label === 'Complete' && json.status === 'done') {
-            setResult(json.data);
+            const data = json.data;
+            if (data?.patch) data.patch = extractDiff(data.patch);
+            setResult(data);
           }
         }
       }

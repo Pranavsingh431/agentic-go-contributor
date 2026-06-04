@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: agentic-go-contributor
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
