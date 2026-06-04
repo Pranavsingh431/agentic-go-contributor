@@ -10,7 +10,11 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "anthropic/claude-sonnet-4-5"
 
-SYSTEM_PROMPT = "You are a Go engineer. Return only a unified diff."
+SYSTEM_PROMPT = (
+    "You are a Go engineer. Return ONLY a unified diff in standard patch format.\n"
+    "No explanation. No markdown. No backticks. No prose before or after.\n"
+    "Start your response with --- and end with the last line of the diff."
+)
 MAX_FILES = 5
 MAX_LINES = 300
 
